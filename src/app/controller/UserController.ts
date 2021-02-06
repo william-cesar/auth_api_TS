@@ -18,10 +18,10 @@ class UserController {
         where: { email },
       });
       if (userExists) {
-        return res.send(MESSAGES.CREATE_USER_FAIL);
+        return res.status(400).send(MESSAGES.CREATE_USER_FAIL);
       }
     } else {
-      return res.send(MESSAGES.VERIFIED_EMAIL_FAIL);
+      return res.status(400).send(MESSAGES.VERIFIED_EMAIL_FAIL);
     }
 
     const user: User = repository.create({ email, password });
