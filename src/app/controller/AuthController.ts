@@ -40,7 +40,8 @@ class AuthController {
 
       delete user.password;
 
-      return res.status(200).send(MESSAGES.LOGIN_SUCCESS);
+      return res.status(200).json(token);
+      //return res.status(200).send(MESSAGES.LOGIN_SUCCESS);
     } else {
       return res.status(400).send(MESSAGES.VERIFIED_EMAIL_FAIL);
     }

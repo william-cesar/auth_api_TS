@@ -6,6 +6,10 @@ import User from '../models/User';
 import { validateEmail } from './../../utils/utils';
 
 class UserController {
+  index(req: Request, res: Response) {
+    res.send({ userID: req.userId });
+  }
+
   async store(req: Request, res: Response) {
     const repository: Repository<User> = getRepository(User);
 
