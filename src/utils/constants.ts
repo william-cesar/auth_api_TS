@@ -3,4 +3,6 @@ export const MESSAGES = {
   ACCESS_FAIL: 'Your credentials are not correct. Verify it and try again.',
   CREATE_USER_SUCCESS: 'Your user was created successfully!',
   CREATE_USER_FAIL: 'Something went wrong while creating this user. Try again.',
+  LOGIN_FAILED: 'Login failed.',
+  LOGIN_SUCCESS: 'Logged in.',
 };
